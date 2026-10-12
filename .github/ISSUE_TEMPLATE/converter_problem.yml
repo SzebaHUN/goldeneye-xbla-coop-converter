@@ -1,0 +1,38 @@
+name: Converter problem
+description: The converter rejected your folder, failed, or behaved unexpectedly
+labels: ["bug", "converter"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Please do not attach game files or .uc64 packages.**
+        The converter accepts only the supported GoldenEye 007 XBLA build (see the README).
+  - type: input
+    id: version
+    attributes:
+      label: Converter version
+      placeholder: v0.1.0
+    validations:
+      required: true
+  - type: textarea
+    id: message
+    attributes:
+      label: Exact message shown in the STATUS / INFO box
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: What did you do?
+      description: e.g. Browse or drag-and-drop, where you saved the package, whether the file already existed.
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: e.g. Windows 11 24H2
+  - type: textarea
+    id: media
+    attributes:
+      label: Screenshot (optional)

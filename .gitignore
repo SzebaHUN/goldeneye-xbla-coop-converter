@@ -1,0 +1,33 @@
+# ---- Never publish game files, packages or saves ----
+*.xex
+*.uc64
+*.uc64.partial
+*.xbe
+*.iso
+*.god
+*.stfs
+beansave.dat
+*.sav
+*.bak
+files/
+ArcadeInfo.xml
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+secrets*
+credentials*
+
+# Public repo is documentation only: binaries go to GitHub Releases,
+# implementation source is not published here.
+*.exe
+*.zip
+*.ico
+src/
+*.cs
+*.rs
+*.py
+*.ps1
+release/

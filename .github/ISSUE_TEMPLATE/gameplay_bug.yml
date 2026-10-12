@@ -1,0 +1,56 @@
+name: Gameplay bug
+description: Something went wrong while playing GoldenEye co-op in Universal Couch 64
+labels: ["bug", "gameplay"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing! This is an experimental release, so every report helps.
+        **Please do not attach game files, .uc64 packages or save files.**
+  - type: input
+    id: mission
+    attributes:
+      label: Mission and difficulty
+      placeholder: e.g. Frigate, Agent
+    validations:
+      required: true
+  - type: textarea
+    id: p1
+    attributes:
+      label: What was Player 1 (host) doing?
+    validations:
+      required: true
+  - type: textarea
+    id: p2
+    attributes:
+      label: What was Player 2 doing?
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect to happen?
+    validations:
+      required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: Player 2 was
+      options:
+        - Remote (joined the UC64 room from another PC)
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: uc
+    attributes:
+      label: UC64 version on host and Player 2
+      description: Only 0.6.2-rc.6 is supported for this package.
+      placeholder: e.g. host 0.6.2-rc.6, Player 2 0.6.2-rc.6
+    validations:
+      required: true
+  - type: textarea
+    id: media
+    attributes:
+      label: Screenshot or video (optional)
+      description: Drag images or a short clip here, or paste a link.
