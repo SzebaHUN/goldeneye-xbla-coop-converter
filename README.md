@@ -25,12 +25,12 @@ Do not download GitHub's automatically generated "Source code" archives.
 > Windows GoldenEye runtime. Other UC64 versions (older *or* newer) are **not** verified. Remote players must
 > use the same UC64 0.6.2-rc.6 version too.
 >
-> **The UC64 0.6.2-rc.6 download is not public yet.** It will be linked here when it is released.
-> The currently public UC64 release (0.5.8) does **not** support this package.
+> **[⬇ Download Universal Couch 64 0.6.2-rc.6](https://github.com/SzebaHUN/universal-couch/releases/tag/v0.6.2-rc.6)** (`Universal Couch_0.6.2-rc.6_x64-setup.exe` under Assets).
+> UC64 0.5.8 and other versions do **not** support this package.
 
 > [!WARNING]
 > **Experimental release.** The two-player campaign works, but the whole campaign has not been played start to finish
-> in co-op, and several issues are still open (see [Known issues](#known-issues)). Only **two players** are supported.
+> in co-op, and several issues are still open (see [Known issues](#known-issues)). Three- and four-player co-op can be enabled when the host assigns the additional participants as Players rather than Watchers. These modes are experimental and have not been validated; two-player co-op is the tested configuration.
 
 > [!NOTE]
 > **No game files are included.** You need your own copy of the GoldenEye 007 XBLA game files.
@@ -93,7 +93,7 @@ The only supported way to play is through UC64.
 | **Converter** | `GoldenEye-Coop-Converter.exe`, one file; works offline; nothing to install (uses the .NET Framework built into Windows) |
 | **Game files** | Your own complete, extracted GoldenEye 007 XBLA game folder: `default.xex`, `ArcadeInfo.xml` and the `files` folder with all its assets and audio |
 | **Supported `default.xex`** | SHA-256 `038a3808477da4a3644d634aacac63b9c19e913b77dffcc22960fb6780f93c04` (other builds are rejected) |
-| **To play** | **Universal Couch 64 0.6.2-rc.6** on the host, and the **same UC64 0.6.2-rc.6** on every remote player's PC (download not public yet) |
+| **To play** | **[Universal Couch 64 0.6.2-rc.6](https://github.com/SzebaHUN/universal-couch/releases/tag/v0.6.2-rc.6)** on the host, and the **same UC64 0.6.2-rc.6** on every remote player's PC |
 | **Free disk space** | About 0.8 GB for the `.uc64` package, plus the same again when UC64 installs it |
 
 This project does not provide game files or download links for them. Please don't ask for them in issues.
@@ -111,7 +111,7 @@ This project does not provide game files or download links for them. Please don'
 5. Click **CREATE PACKAGE** and choose where to save `GoldenEye 007 Co-op.uc64`. You are asked before an existing file
    is replaced. A progress bar shows the conversion (a few seconds to a minute). Your game folder is not changed.
 6. When it says **Done**, **OPEN OUTPUT FOLDER** shows the new file.
-7. Install the **matching Universal Couch 64 0.6.2-rc.6**.
+7. Install the **matching [Universal Couch 64 0.6.2-rc.6](https://github.com/SzebaHUN/universal-couch/releases/tag/v0.6.2-rc.6)** (everyone who plays installs this same version).
 8. In UC64: **Host Game** → choose (or drop) `GoldenEye 007 Co-op.uc64`. UC64 checks the package and installs it the
    first time.
 9. Host a room. Player 2 joins with the room code in **the same UC64 0.6.2-rc.6**. The host makes them a player and
@@ -157,22 +157,24 @@ Revive is implemented as described, but it was not re-tested during this release
 
 ## Screenshots
 
-These are screenshots of the actual converter and of the game running through UC64 on Windows (two-player split screen).
+The converter screenshot above is the actual program. The gameplay screenshots below are real captures of the game
+running through UC64 on Windows (two-player split screen), with the **game imagery deliberately blurred**; the captions
+describe what each one shows.
 
 <p align="center"><img src="docs/coop-briefing.png" width="600" alt="Mission briefing with both players ready"></p>
-<p align="center"><i>Mission briefing (Runway). Both players are joined; the corner cards show each player's state.</i></p>
+<p align="center"><i>Blurred: mission briefing (Runway) with both players joined; the corner cards show each player's state.</i></p>
 
 <p align="center"><img src="docs/coop-split-screen.png" width="600" alt="Two-player split screen at the start of Runway"></p>
-<p align="center"><i>Two players in the same mission, one view each.</i></p>
+<p align="center"><i>Blurred: two players in the same mission, one view each (top and bottom).</i></p>
 
 <p align="center"><img src="docs/coop-mission-tool.png" width="600" alt="Both players selecting the covert modem on Dam"></p>
-<p align="center"><i>Dam: each player holds Y to select the covert modem; the tool name appears at the top of that player's view.</i></p>
+<p align="center"><i>Blurred: Dam — each player holds Y to select the covert modem; the tool name appears at the top of that player's view.</i></p>
 
 <p align="center"><img src="docs/coop-mission-message.png" width="600" alt="Covert modem installed message in both views"></p>
-<p align="center"><i>Dam: Player 2 installs the covert modem; the mission message appears inside both players' views.</i></p>
+<p align="center"><i>Blurred: Dam — Player 2 installs the covert modem; the mission message appears inside both players' views.</i></p>
 
 <p align="center"><img src="docs/coop-mission-complete.png" width="600" alt="Runway mission report: completed"></p>
-<p align="center"><i>Runway completed in co-op through the normal menus; the mission report and save work as usual.</i></p>
+<p align="center"><i>Blurred: Runway mission report after completing it in co-op through the normal menus.</i></p>
 
 ## Tested so far
 
@@ -197,7 +199,7 @@ On two Windows laptops over a home network with UC64 (one host, one remote playe
 - **Not yet verified:** the GoldenEye key / key copy (Bunker), Frigate bomb defusers, Silo plastique, Train watch laser,
   Aztec guidance data, the watch magnet, the Facility door decoder and the bonus missions; the pause-menu objectives
   panel; the converter's drag-and-drop (Browse is verified).
-- **Three or four players:** not supported in this release (unverified).
+- **Three or four players:** Three- and four-player co-op can be enabled when the host assigns the additional participants as Players rather than Watchers. These modes are experimental and have not been validated; two-player co-op is the tested configuration.
 - **Version lock:** only UC64 0.6.2-rc.6 is supported for hosts and remote players.
 - The converter is Windows-only and not code-signed.
 
