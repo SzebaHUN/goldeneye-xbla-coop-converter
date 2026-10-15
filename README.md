@@ -14,8 +14,8 @@ played through <b>Universal Couch 64 (UC64)</b>. Bring your own game files.
 ## Quick start
 
 1. Install **[Universal Couch 64 v0.6.3](https://github.com/SzebaHUN/universal-couch/releases/tag/v0.6.3)** (host and every remote player).
-2. Download **GoldenEye-Coop-Converter.exe** (below).
-3. Run it and select **your own** GoldenEye XBLA game folder (the folder with `default.xex`).
+2. Download **`GoldenEye-Coop-Converter-v0.2.1.zip`** (below), right-click it and choose **Extract All**.
+3. In the extracted folder, double-click **`GoldenEye-Coop-Converter.exe`** and select **your own** GoldenEye XBLA game folder (the folder with `default.xex`).
 4. Click **CREATE PACKAGE** and wait: the converter builds the game runtime from your files.
 5. You get **one complete `.uc64` package**.
 6. In UC64: **Host Game**, choose the `.uc64`, host a room and press **START GAME**.
@@ -25,9 +25,9 @@ No compiler, runtime installer or manual copying is needed.
 
 ## Download
 
-**[Download GoldenEye Co-op Converter v0.2.0 for Windows](https://github.com/SzebaHUN/goldeneye-xbla-coop-converter/releases/tag/v0.2.0)**
+**[Download GoldenEye Co-op Converter v0.2.1 for Windows](https://github.com/SzebaHUN/goldeneye-xbla-coop-converter/releases/tag/v0.2.1)**
 
-Download `GoldenEye-Coop-Converter.exe` (and optionally `SHA256SUMS.txt`) from **Assets**.
+Download `GoldenEye-Coop-Converter-v0.2.1.zip` (and optionally `SHA256SUMS.txt`) from **Assets**, then right-click the ZIP and choose **Extract All**. Keep the extracted files together. (v0.2.0 was replaced by v0.2.1; its single-file download has been withdrawn.)
 Do not download GitHub's automatically generated "Source code" archives.
 
 > [!IMPORTANT]
@@ -101,27 +101,27 @@ The only supported way to play is through UC64.
 | | |
 |---|---|
 | **OS** | Windows 10 or 11 (64-bit) |
-| **Converter** | `GoldenEye-Coop-Converter.exe`, one file (about 90 MB); works offline; nothing to install (uses the .NET Framework built into Windows). It contains its own build tools (LLVM/MinGW) and the co-op runtime, but no game code |
+| **Converter** | `GoldenEye-Coop-Converter-v0.2.1.zip` (about 90 MB; about 0.4 GB extracted): `GoldenEye-Coop-Converter.exe`, `backend\` and `kit\` (its own build tools - LLVM/MinGW - and the co-op runtime, no game code). Works offline; nothing to install (uses the .NET Framework built into Windows) |
 | **Game files** | Your own complete, extracted GoldenEye 007 XBLA game folder: `default.xex`, `ArcadeInfo.xml` and the `files` folder with all its assets and audio |
 | **Supported `default.xex`** | SHA-256 `038a3808477da4a3644d634aacac63b9c19e913b77dffcc22960fb6780f93c04` (other builds are rejected) |
 | **To play** | **[Universal Couch 64](https://github.com/SzebaHUN/universal-couch/releases) 0.6.3 or later** on the host and on every remote player's PC |
-| **Free disk space** | About 0.4 GB for the converter's build tools (unpacked once), 0.8 GB for the `.uc64` package, plus the same again when UC64 installs it |
+| **Free disk space** | About 0.4 GB for the extracted converter, 0.8 GB for the `.uc64` package, plus the same again when UC64 installs it |
 
 This project does not provide game files or download links for them. Please don't ask for them in issues.
 
 ## Setup
 
-1. **Download** `GoldenEye-Coop-Converter.exe` from the [release Assets](https://github.com/SzebaHUN/goldeneye-xbla-coop-converter/releases/tag/v0.2.0).
-   It is a single file; there is no archive to extract and no companion file to keep.
+1. **Download** `GoldenEye-Coop-Converter-v0.2.1.zip` from the [release Assets](https://github.com/SzebaHUN/goldeneye-xbla-coop-converter/releases/tag/v0.2.1),
+   right-click it and choose **Extract All**. Keep the extracted folder's files together.
 2. Have your GoldenEye 007 XBLA game folder **extracted** on your PC: the folder that contains `default.xex`,
    `ArcadeInfo.xml` and the complete `files` folder (all assets and audio).
-3. Run `GoldenEye-Coop-Converter.exe`. Click **BROWSE...** and select that folder.
+3. In the extracted folder, double-click `GoldenEye-Coop-Converter.exe`. Click **BROWSE...** and select your game folder.
    (You can also drag the folder onto the window.)
 4. The status box says whether the folder is valid. **CREATE PACKAGE** is only enabled for a supported, complete folder;
    otherwise it explains what is wrong.
 5. Click **CREATE PACKAGE** and choose where to save `GoldenEye 007 Co-op.uc64`. You are asked before an existing file
    is replaced. The converter then builds the game runtime from your files and writes the package; a progress bar
-   shows it (about 1–5 minutes, plus a one-time unpack of its build tools). Your game folder is not changed.
+   shows it (about 1–5 minutes). Your game folder is not changed.
 6. When it says **Done**, **OPEN OUTPUT FOLDER** shows the new file.
 7. Install **[Universal Couch 64](https://github.com/SzebaHUN/universal-couch/releases) 0.6.3 or later** (everyone who plays).
 8. In UC64: **Host Game** → choose (or drop) `GoldenEye 007 Co-op.uc64`. UC64 checks the package and its runtime and
@@ -131,11 +131,11 @@ This project does not provide game files or download links for them. Please don'
 
 <p align="center"><img src="docs/converter.png" width="760" alt="GoldenEye Co-op Converter window"></p>
 
-The converter keeps a helper copy of its packaging backend in `%TEMP%\UC64-GoldenEye-Converter` while it works;
-it is safe to delete.
+While it works, the converter builds in `%LOCALAPPDATA%\UC64-GoldenEye-Converter\build` and deletes that folder when it
+is done. It runs its backend and build tools from the extracted folder; nothing is installed.
 
 **Windows SmartScreen:** the `.exe` is not code-signed, so Windows may warn on first launch. Click *More info*, then
-*Run anyway*. You can check the file against `SHA256SUMS.txt` from the release.
+*Run anyway*. You can check the ZIP against `SHA256SUMS.txt` from the release.
 
 The `.uc64` package contains your own game files. Keep it for yourself; never share or upload it.
 
@@ -223,7 +223,7 @@ Please [open an issue](https://github.com/SzebaHUN/goldeneye-xbla-coop-converter
 - **What Player 1 was doing** and **what Player 2 was doing**
 - **What happened** and **what you expected**
 - **Local or remote** Player 2, and both players' **UC64 version** (0.6.3 or later)
-- **Converter version** (v0.2.0) for converter problems, and the exact message it showed
+- **Converter version** (v0.2.1) for converter problems, and the exact message it showed
 - A **screenshot or short video**, if you have one
 
 Please don't attach game files, `.uc64` packages or save files to issues.

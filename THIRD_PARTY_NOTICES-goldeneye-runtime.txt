@@ -1,6 +1,6 @@
-GOLDENEYE XBLA CO-OP CONVERTER v0.2.0 - GOLDENEYE RUNTIME: THIRD-PARTY NOTICES
+GOLDENEYE XBLA CO-OP CONVERTER v0.2.x - GOLDENEYE RUNTIME: THIRD-PARTY NOTICES
 
-From v0.2.0 the GoldenEye runtime ships with this converter, not with Universal Couch 64 (UC64 0.6.3
+From v0.2.0 (v0.2.1: the kit\runtime folder of the ZIP) the GoldenEye runtime ships with this converter, not with Universal Couch 64 (UC64 0.6.3
 and later contain no GoldenEye runtime). The converter carries the game-free part (ge.exe - the co-op
 host without game code -, rexruntimerd.dll, TracyClientrd.dll and the Microsoft Visual C++ runtime
 DLLs) and builds the game-specific part (ge_game.dll) on the user's PC from the user's own
@@ -10,7 +10,7 @@ Part 1 below lists the components and licence texts of the runtime (unchanged si
 the components are the same). Part 2 is the addendum and the source offer for the LGPL components.
 
 ==============================================================================
-PART 2 - ADDENDUM (applies to GoldenEye XBLA Co-op Converter v0.2.0)
+PART 2 - ADDENDUM (applies to GoldenEye XBLA Co-op Converter v0.2.0 and v0.2.1)
 ==============================================================================
 
 Additional components compiled into rexruntimerd.dll (via the rexglue toolkit):
@@ -40,7 +40,7 @@ LGPL-2.1 components (FFmpeg libavcodec/libavutil, libmspack lzxd.c)
     local change).
 
   WRITTEN OFFER (LGPL 2.1, section 6(c)): for at least three years from the release of GoldenEye XBLA
-  Co-op Converter v0.2.0, SzebaHUN will provide to anyone who received this runtime, on request and for
+  Co-op Converter v0.2.1, SzebaHUN will provide to anyone who received this runtime, on request and for
   no more than the cost of providing it, the complete corresponding source code of the LGPL libraries
   above and the materials needed to relink rexruntimerd.dll with a modified version of them (the rexglue
   source for this build, including the local change, and build instructions). Request it by opening an
