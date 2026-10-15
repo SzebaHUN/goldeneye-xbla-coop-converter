@@ -11,9 +11,21 @@ A fan-made two-player co-op campaign for the <i>GoldenEye 007</i> Xbox Live Arca
 played through <b>Universal Couch 64 (UC64)</b>. Bring your own game files.
 </p>
 
+## Quick start
+
+1. Install **[Universal Couch 64 v0.6.3](https://github.com/SzebaHUN/universal-couch/releases/tag/v0.6.3)** (host and every remote player).
+2. Download **GoldenEye-Coop-Converter.exe** (below).
+3. Run it and select **your own** GoldenEye XBLA game folder (the folder with `default.xex`).
+4. Click **CREATE PACKAGE** and wait: the converter builds the game runtime from your files.
+5. You get **one complete `.uc64` package**.
+6. In UC64: **Host Game**, choose the `.uc64`, host a room and press **START GAME**.
+7. Your friend joins the room with **UC64 alone** (no game files, no converter).
+
+No compiler, runtime installer or manual copying is needed.
+
 ## Download
 
-**[Download GoldenEye Co-op Converter v0.1.0 for Windows](https://github.com/SzebaHUN/goldeneye-xbla-coop-converter/releases/tag/v0.1.0)**
+**[Download GoldenEye Co-op Converter v0.2.0 for Windows](https://github.com/SzebaHUN/goldeneye-xbla-coop-converter/releases/tag/v0.2.0)**
 
 Download `GoldenEye-Coop-Converter.exe` (and optionally `SHA256SUMS.txt`) from **Assets**.
 Do not download GitHub's automatically generated "Source code" archives.
@@ -24,7 +36,7 @@ Do not download GitHub's automatically generated "Source code" archives.
 > from your own game files** and puts it in the `.uc64` package, so UC64 needs nothing else installed. UC64 only
 > starts a runtime that is byte-for-byte the approved build. Remote players only need UC64 (no game files).
 >
-> **[⬇ Download Universal Couch 64](https://github.com/SzebaHUN/universal-couch/releases)**.
+> **[⬇ Download Universal Couch 64 v0.6.3](https://github.com/SzebaHUN/universal-couch/releases/tag/v0.6.3)** (`Universal Couch_0.6.3_x64-setup.exe` under Assets).
 > UC64 0.6.2 and older do **not** support this package.
 
 > [!WARNING]
@@ -99,7 +111,7 @@ This project does not provide game files or download links for them. Please don'
 
 ## Setup
 
-1. **Download** `GoldenEye-Coop-Converter.exe` from the [release Assets](https://github.com/SzebaHUN/goldeneye-xbla-coop-converter/releases/tag/v0.1.0).
+1. **Download** `GoldenEye-Coop-Converter.exe` from the [release Assets](https://github.com/SzebaHUN/goldeneye-xbla-coop-converter/releases/tag/v0.2.0).
    It is a single file; there is no archive to extract and no companion file to keep.
 2. Have your GoldenEye 007 XBLA game folder **extracted** on your PC: the folder that contains `default.xex`,
    `ArcadeInfo.xml` and the complete `files` folder (all assets and audio).
@@ -211,7 +223,7 @@ Please [open an issue](https://github.com/SzebaHUN/goldeneye-xbla-coop-converter
 - **What Player 1 was doing** and **what Player 2 was doing**
 - **What happened** and **what you expected**
 - **Local or remote** Player 2, and both players' **UC64 version** (0.6.3 or later)
-- **Converter version** (v0.1.0) for converter problems, and the exact message it showed
+- **Converter version** (v0.2.0) for converter problems, and the exact message it showed
 - A **screenshot or short video**, if you have one
 
 Please don't attach game files, `.uc64` packages or save files to issues.

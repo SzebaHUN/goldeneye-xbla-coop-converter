@@ -2,7 +2,12 @@
 
 `GoldenEye-Coop-Converter.exe` is a Windows Forms program for the .NET Framework 4.x that is part of Windows (the framework is not redistributed). It embeds a small conversion backend written in Rust. The backend is statically linked with the Rust standard library and the open-source Rust crates below.
 
-No GPL/LGPL code is included. The converter contains no game data.
+From v0.2.0 the converter also embeds a **build kit** that generates and compiles the game-specific runtime code on your PC from your own game files, and the **game-free GoldenEye runtime**:
+
+- [THIRD_PARTY_NOTICES-build-kit.txt](THIRD_PARTY_NOTICES-build-kit.txt): llvm-mingw toolchain (LLVM, Apache-2.0 WITH LLVM-exception; mingw-w64), ReXGlue SDK headers and code generator (BSD-3-Clause), SIMDe (MIT).
+- [THIRD_PARTY_NOTICES-goldeneye-runtime.txt](THIRD_PARTY_NOTICES-goldeneye-runtime.txt): the runtime (ge.exe co-op host, rexruntimerd.dll, Tracy, Microsoft Visual C++ runtime), including FFmpeg and libmspack under the **LGPL 2.1** and the written offer for their source and relinking materials.
+
+The converter contains no game data and no game code.
 
 Artwork, icon and QR images: (c) SzebaHUN.
 
