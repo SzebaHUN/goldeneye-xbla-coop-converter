@@ -1,6 +1,6 @@
 GOLDENEYE XBLA CO-OP CONVERTER v0.2.x - GOLDENEYE RUNTIME: THIRD-PARTY NOTICES
 
-From v0.2.0 (v0.2.1: the kit\runtime folder of the ZIP) the GoldenEye runtime ships with this converter, not with Universal Couch 64 (UC64 0.6.3
+From v0.2 (the kit\runtime folder) the GoldenEye runtime ships with this converter, not with Universal Couch 64 (UC64 0.6.3
 and later contain no GoldenEye runtime). The converter carries the game-free part (ge.exe - the co-op
 host without game code -, rexruntimerd.dll, TracyClientrd.dll and the Microsoft Visual C++ runtime
 DLLs) and builds the game-specific part (ge_game.dll) on the user's PC from the user's own
@@ -10,7 +10,7 @@ Part 1 below lists the components and licence texts of the runtime (unchanged si
 the components are the same). Part 2 is the addendum and the source offer for the LGPL components.
 
 ==============================================================================
-PART 2 - ADDENDUM (applies to GoldenEye XBLA Co-op Converter v0.2.0 and v0.2.1)
+PART 2 - ADDENDUM (applies to GoldenEye XBLA Co-op Converter v0.2.x)
 ==============================================================================
 
 Additional components compiled into rexruntimerd.dll (via the rexglue toolkit):

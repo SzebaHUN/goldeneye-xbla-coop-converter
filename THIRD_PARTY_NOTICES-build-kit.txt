@@ -1,6 +1,6 @@
 GOLDENEYE XBLA CO-OP CONVERTER v0.2.x - BUILD KIT: THIRD-PARTY NOTICES
 
-The converter includes a build kit (the kit\ folder of the v0.2.1 ZIP; embedded in v0.2.0) that it uses
+The converter includes a build kit (the kit\ folder next to the program) that it uses
 to generate and compile the game-specific runtime code on your PC from your own game files:
 the llvm-mingw toolchain (https://github.com/mstorsjo/llvm-mingw, release 20260922, LLVM 23.1.2;
 x86_64 subset, unmodified), the ReXGlue SDK headers and code generator (rexglue.exe), and SIMDe.

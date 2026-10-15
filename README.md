@@ -27,7 +27,7 @@ No compiler, runtime installer or manual copying is needed.
 
 **[Download GoldenEye Co-op Converter v0.2.1 for Windows](https://github.com/SzebaHUN/goldeneye-xbla-coop-converter/releases/tag/v0.2.1)**
 
-Download `GoldenEye-Coop-Converter-v0.2.1.zip` (and optionally `SHA256SUMS.txt`) from **Assets**, then right-click the ZIP and choose **Extract All**. Keep the extracted files together. (v0.2.0 was replaced by v0.2.1; its single-file download has been withdrawn.)
+Download `GoldenEye-Coop-Converter-v0.2.1.zip` (and optionally `SHA256SUMS.txt`) from **Assets**, then right-click the ZIP and choose **Extract All**. Keep the extracted files together.
 Do not download GitHub's automatically generated "Source code" archives.
 
 > [!IMPORTANT]
