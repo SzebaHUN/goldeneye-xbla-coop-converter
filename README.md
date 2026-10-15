@@ -19,14 +19,13 @@ Download `GoldenEye-Coop-Converter.exe` (and optionally `SHA256SUMS.txt`) from *
 Do not download GitHub's automatically generated "Source code" archives.
 
 > [!IMPORTANT]
-> **UC64-exclusive build. Playing requires Universal Couch 64 version 0.6.2-rc.6 exactly.**
-> The converter itself runs offline and does not need UC64 installed. But the `.uc64` package it creates
-> can only be played with the **matching UC64 0.6.2-rc.6** build, whose installer supplies the modified
-> Windows GoldenEye runtime. Other UC64 versions (older *or* newer) are **not** verified. Remote players must
-> use the same UC64 0.6.2-rc.6 version too.
+> **UC64-exclusive build. Playing requires Universal Couch 64 0.6.3 or later.**
+> The converter runs offline and does not need UC64 installed. It builds the co-op GoldenEye runtime **on your PC
+> from your own game files** and puts it in the `.uc64` package, so UC64 needs nothing else installed. UC64 only
+> starts a runtime that is byte-for-byte the approved build. Remote players only need UC64 (no game files).
 >
-> **[⬇ Download Universal Couch 64 0.6.2-rc.6](https://github.com/SzebaHUN/universal-couch/releases/tag/v0.6.2-rc.6)** (`Universal Couch_0.6.2-rc.6_x64-setup.exe` under Assets).
-> UC64 0.5.8 and other versions do **not** support this package.
+> **[⬇ Download Universal Couch 64](https://github.com/SzebaHUN/universal-couch/releases)**.
+> UC64 0.6.2 and older do **not** support this package.
 
 > [!WARNING]
 > **Experimental release.** The two-player campaign works, but the whole campaign has not been played start to finish
@@ -90,11 +89,11 @@ The only supported way to play is through UC64.
 | | |
 |---|---|
 | **OS** | Windows 10 or 11 (64-bit) |
-| **Converter** | `GoldenEye-Coop-Converter.exe`, one file; works offline; nothing to install (uses the .NET Framework built into Windows) |
+| **Converter** | `GoldenEye-Coop-Converter.exe`, one file (about 90 MB); works offline; nothing to install (uses the .NET Framework built into Windows). It contains its own build tools (LLVM/MinGW) and the co-op runtime, but no game code |
 | **Game files** | Your own complete, extracted GoldenEye 007 XBLA game folder: `default.xex`, `ArcadeInfo.xml` and the `files` folder with all its assets and audio |
 | **Supported `default.xex`** | SHA-256 `038a3808477da4a3644d634aacac63b9c19e913b77dffcc22960fb6780f93c04` (other builds are rejected) |
-| **To play** | **[Universal Couch 64 0.6.2-rc.6](https://github.com/SzebaHUN/universal-couch/releases/tag/v0.6.2-rc.6)** on the host, and the **same UC64 0.6.2-rc.6** on every remote player's PC |
-| **Free disk space** | About 0.8 GB for the `.uc64` package, plus the same again when UC64 installs it |
+| **To play** | **[Universal Couch 64](https://github.com/SzebaHUN/universal-couch/releases) 0.6.3 or later** on the host and on every remote player's PC |
+| **Free disk space** | About 0.4 GB for the converter's build tools (unpacked once), 0.8 GB for the `.uc64` package, plus the same again when UC64 installs it |
 
 This project does not provide game files or download links for them. Please don't ask for them in issues.
 
@@ -109,13 +108,13 @@ This project does not provide game files or download links for them. Please don'
 4. The status box says whether the folder is valid. **CREATE PACKAGE** is only enabled for a supported, complete folder;
    otherwise it explains what is wrong.
 5. Click **CREATE PACKAGE** and choose where to save `GoldenEye 007 Co-op.uc64`. You are asked before an existing file
-   is replaced. A progress bar shows the conversion (a few seconds to a minute). Your game folder is not changed.
+   is replaced. The converter then builds the game runtime from your files and writes the package; a progress bar
+   shows it (about 1–5 minutes, plus a one-time unpack of its build tools). Your game folder is not changed.
 6. When it says **Done**, **OPEN OUTPUT FOLDER** shows the new file.
-7. Install the **matching [Universal Couch 64 0.6.2-rc.6](https://github.com/SzebaHUN/universal-couch/releases/tag/v0.6.2-rc.6)** (everyone who plays installs this same version).
-8. In UC64: **Host Game** → choose (or drop) `GoldenEye 007 Co-op.uc64`. UC64 checks the package and installs it the
-   first time.
-9. Host a room. Player 2 joins with the room code in **the same UC64 0.6.2-rc.6**. The host makes them a player and
-   presses **START GAME**.
+7. Install **[Universal Couch 64](https://github.com/SzebaHUN/universal-couch/releases) 0.6.3 or later** (everyone who plays).
+8. In UC64: **Host Game** → choose (or drop) `GoldenEye 007 Co-op.uc64`. UC64 checks the package and its runtime and
+   installs it the first time.
+9. Host a room. Player 2 joins with the room code in UC64. The host makes them a player and presses **START GAME**.
 10. On the title screen, Player 2 presses **START** to join. Player 1 picks the mission and difficulty.
 
 <p align="center"><img src="docs/converter.png" width="760" alt="GoldenEye Co-op Converter window"></p>
@@ -200,7 +199,8 @@ On two Windows laptops over a home network with UC64 (one host, one remote playe
   Aztec guidance data, the watch magnet, the Facility door decoder and the bonus missions; the pause-menu objectives
   panel; the converter's drag-and-drop (Browse is verified).
 - **Three or four players:** Three- and four-player co-op can be enabled when the host assigns the additional participants as Players rather than Watchers. These modes are experimental and have not been validated; two-player co-op is the tested configuration.
-- **Version lock:** only UC64 0.6.2-rc.6 is supported for hosts and remote players.
+- **Version lock:** packages need UC64 0.6.3 or later on the host and remote players' PCs; packages made with
+  converter v0.1.0 must be made again with this converter.
 - The converter is Windows-only and not code-signed.
 
 ## Reporting bugs
@@ -210,7 +210,7 @@ Please [open an issue](https://github.com/SzebaHUN/goldeneye-xbla-coop-converter
 - **Mission** and **difficulty**
 - **What Player 1 was doing** and **what Player 2 was doing**
 - **What happened** and **what you expected**
-- **Local or remote** Player 2, and both players' **UC64 version** (should be 0.6.2-rc.6)
+- **Local or remote** Player 2, and both players' **UC64 version** (0.6.3 or later)
 - **Converter version** (v0.1.0) for converter problems, and the exact message it showed
 - A **screenshot or short video**, if you have one
 
@@ -221,7 +221,8 @@ Please don't attach game files, `.uc64` packages or save files to issues.
 - ***GoldenEye 007*** was created by **Rare** (Nintendo 64, 1997). The Xbox Live Arcade version was developed by
   **4J Studios** with Rare. All credit for the original game goes to its creators.
 - **GoldenEye co-op, the converter and Universal Couch 64:** **SzebaHUN**.
-- The Windows GoldenEye runtime used by UC64 is a static recompilation of the XBLA game.
+- The Windows GoldenEye runtime is a static recompilation of the XBLA game (ReXGlue). The converter generates and
+  compiles the game-specific part on your PC from your own `default.xex`; the converter itself contains no game code.
 - The converter bundles open-source components; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 This is an independent fan project. It is not affiliated with, endorsed by or connected to Rare, Microsoft, Nintendo,
